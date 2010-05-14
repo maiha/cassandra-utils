@@ -1,0 +1,36 @@
+cassandra-utils
+===============
+
+  A tiny utils for cassandra db to backup sstables easily
+
+
+dump
+====
+
+    % thor backup:dump
+Argument Error: needs both <KEYSPACE> and <BACKUP_DIR> arguments.
+
+For Example:
+
+    thor backup:dump Keyspace1 20100514
+
+This will execute following commands.
+Try again like that, or simply copy and paste.
+
+sstable2json /var/lib/cassandra/data/Keyspace1/Standard2-28-Data.db > 20100514/Standard2-28-Data.db.json
+sstable2json /var/lib/cassandra/data/Keyspace1/Standard2-30-Data.db > 20100514/Standard2-30-Data.db.json
+...
+
+
+restore
+=======
+
+  Not implemented yet :)
+
+
+author
+======
+
+  maiha@wota.jp
+  http://github.com/maiha/cassandra-utils
+
